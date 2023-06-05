@@ -1,0 +1,50 @@
+<br><br>
+<!-- toolbar -->
+<div class="toolbar" role="banner">
+  <!-- <img
+    width="40"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  /> -->
+  <img
+  width="40"
+  alt="Angular Logo"
+  src="https://seocom.agency/wp-content/uploads/2019/02/bootstrap-stack.png"
+/>
+<span>Welcome Angular App</span>
+</div>
+
+<div class="container barra rounded">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <img src="https://sg.com.mx/sites/default/files/styles/570x500/public/images/angular-logo.png?itok=_4hR0cNu" alt="logo angular" width="50" height="50">
+    </div>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+      <li><a href="#" class="nav-link px-2">Inicio</a></li>
+      <li><a href="#" class="nav-link px-2">Contacto</a></li>
+      <li><a href="#" class="nav-link px-2">Nosotros</a></li>
+      <li><a href="#" class="nav-link px-2">Usuarios</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button (click)="logOut()" type="button" class="btn btn-outline-primary me-2 btn-sm">LogOut</button>
+    </div>
+  </header>
+</div>
+
+<section *ngIf="auth.user$ | async as user" class="py-5 text-center container">
+  <div class="card  mt-2" style="width: 18rem;">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h3 class="fw-light mt-2"><strong>wellcome</strong></h3><br>
+      <img [src]="user.picture" alt="imagen usuario" class="rounded-circle" >
+      <br>
+      <p>{{ user.name }}</p>
+      <!-- <p>{{ user.email }}</p> -->
+      <!-- <p class="lead text-muted">{{ user | json }}</p> -->
+    </div>
+  </div>
+</section>
+
+
+
